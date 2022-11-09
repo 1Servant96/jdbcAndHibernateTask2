@@ -1,12 +1,14 @@
 package peaksoft.dao;
 
-import peaksoft.model.User;
+import peaksoft.entity.User;
 
 import java.util.List;
 
 public interface UserDao {
 
     void createUsersTable();
+
+//    void createUsersTable(User user);
 
     void dropUsersTable();
 

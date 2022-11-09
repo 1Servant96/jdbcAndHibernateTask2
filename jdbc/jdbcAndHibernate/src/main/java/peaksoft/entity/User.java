@@ -1,10 +1,17 @@
-package peaksoft.model;
+package peaksoft.entity;
+
+//import lombok.Data;
+//import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@Table
+//@NoArgsConstructor
+//@Data
+@Entity
+@Table(name = "usersNew")
 public class User {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column

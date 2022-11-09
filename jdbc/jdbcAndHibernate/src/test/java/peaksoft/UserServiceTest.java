@@ -2,7 +2,7 @@ package peaksoft;
 
 import org.junit.Assert;
 import org.junit.Test;
-import peaksoft.model.User;
+import peaksoft.entity.User;
 import peaksoft.service.UserService;
 import peaksoft.service.UserServiceImpl;
 

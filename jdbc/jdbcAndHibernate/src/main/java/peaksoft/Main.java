@@ -1,6 +1,7 @@
 package peaksoft;
 
 import peaksoft.service.UserServiceImpl;
+
 import java.util.Scanner;
 
 public class Main {
@@ -13,12 +14,31 @@ public class Main {
             queries();
             String inputS = scannerS.nextLine();
             switch (inputS) {
-                case "1" -> userService.createUsersTable();
-                case "2" -> userService.saveUser(scannerS.nextLine(), scannerS.nextLine(), scannerN.nextByte());
-                case "3" -> System.out.println(userService.getAllUsers());
-                case "4" -> userService.cleanUsersTable();
-                case "5" -> userService.dropUsersTable();
-                case "6" -> userService.removeUserById(scannerN.nextLong());
+                case "1" -> {
+                    userService.createUsersTable();
+//                    HibernateConfig.shutDown();
+                }
+
+                case "2" -> {
+                    userService.saveUser(scannerS.nextLine(), scannerS.nextLine(), scannerN.nextByte());
+
+                }
+                case "3" -> {
+                    System.out.println(userService.getAllUsers());
+//                    HibernateConfig.shutDown();
+                }
+                case "4" -> {
+                    userService.cleanUsersTable();
+//                    HibernateConfig.shutDown();
+                }
+                case "5" -> {
+                    userService.dropUsersTable();
+//                    HibernateConfig.shutDown();
+                }
+                case "6" -> {
+                    userService.removeUserById(scannerN.nextLong());
+//                    HibernateConfig.shutDown();
+                }
             }
             if (inputS.equals("x"))
                 break;

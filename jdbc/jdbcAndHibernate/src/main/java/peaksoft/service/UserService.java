@@ -1,6 +1,6 @@
 package peaksoft.service;
 
-import peaksoft.model.User;
+import peaksoft.entity.User;
 
 import java.util.List;
 
